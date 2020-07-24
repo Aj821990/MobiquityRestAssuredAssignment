@@ -15,7 +15,7 @@
         <junit.version>4.12</junit.version>
         <testNG.version>6.14.3</testNG.version>
         <selenium-java>3.14.0</selenium-java>
-        <junit.dataprovider.version>2.6</junit.dataprovider.version>
+        <rest-assured>3.3.0</rest-assured>
         <jackson.databind.version>2.10.3</jackson.databind.version>
         <wiremock.version>2.26.2</wiremock.version>
         <log4j.version>1.2.17</log4j.version>
@@ -54,10 +54,9 @@
         </dependency>
 
         <dependency>
-            <groupId>com.tngtech.junit.dataprovider</groupId>
-            <artifactId>junit4-dataprovider</artifactId>
-            <version>${junit.dataprovider.version}</version>
-            <scope>test</scope>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${rest-assured}</version>
         </dependency>
 
         <dependency>

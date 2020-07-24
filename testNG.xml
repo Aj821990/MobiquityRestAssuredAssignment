@@ -14,7 +14,7 @@
 
     <test name="Tests">
         <classes>
-            <class name=""> </class>
+            <class name="APITesting.testCases.VerifyingEmailID"> </class>
         </classes>
     </test>
 </suite>
