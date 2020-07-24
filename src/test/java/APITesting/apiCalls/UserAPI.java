@@ -1,4 +1,4 @@
-package APITesting.testCases;
+package APITesting.apiCalls;
 
 import framework.base.BasePageMethod;
 import io.restassured.builder.RequestSpecBuilder;
