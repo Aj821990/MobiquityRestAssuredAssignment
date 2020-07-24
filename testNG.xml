@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Mobiquity" preserve-order="true">
+    <parameter name="reTry" value="0"/>
+    <parameter name="env" value=""/>
+    <parameter name="____" value="____"/>
+
+<!--
+    <listeners>
+        <listener class-name="" />
+    </listeners>
+-->
+
+    <test name="Tests">
+        <classes>
+            <class name=""> </class>
+        </classes>
+    </test>
+</suite>
