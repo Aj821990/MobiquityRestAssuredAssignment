@@ -1,6 +1,6 @@
 package APITesting.testCases;
 
-import APITesting.testCases.UserAPI;
+import APITesting.apiCalls.getUserID;
 import framework.base.TestBase;
 import org.testng.annotations.Test;
 
@@ -9,8 +9,8 @@ public class VerifyingEmailID extends TestBase {
     @Test(description = "verify emailid format")
     public void verifyEmailIDFormat()
     {
-        UserAPI userAPI = new UserAPI();
+        getUserID getUserID = new getUserID();
 
-        userAPI.searchUserId("Delphine");
+        getUserID.searchUserId("Delphine");
     }
 }
