@@ -18,7 +18,7 @@
                         <version>3.0.0-M5</version>  <!--https://maven.apache.org/surefire/maven-surefire-plugin/examples/testng.html-->
                         <configuration>
                             <suiteXmlFiles>
-                                <suiteXmlFile>testng.xml</suiteXmlFile>
+                                <suiteXmlFile>testNG.xml</suiteXmlFile>
                             </suiteXmlFiles>
                         </configuration>
                     </plugin>
