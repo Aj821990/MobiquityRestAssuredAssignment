@@ -22,7 +22,7 @@ jobs:
             - ~/.m2
           key: MobiquityRestAssuredAssignment-{{ checksum "pom.xml" }}
 
-      - run: mvn clean verify
+      - run: mvn clean test -Dtest=VerifyingEmailID -DreTry=0
 
       - store_test_results:
           path: reports
