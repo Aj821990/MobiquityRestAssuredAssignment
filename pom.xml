@@ -13,7 +13,8 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <junit.version>4.12</junit.version>
-        <testNG.version>6.14.3</testNG.version>
+        <testNG-test.version>6.14.3</testNG-test.version>
+        <testNG-compile.version>6.14.3</testNG-compile.version>
         <selenium-java>3.14.0</selenium-java>
         <rest-assured>3.3.0</rest-assured>
         <jackson.databind.version>2.10.3</jackson.databind.version>
@@ -38,14 +39,14 @@
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>${testNG.version}</version>
+            <version>${testNG-test.version}</version>
             <scope>test</scope>
         </dependency>
 
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>${testNG.version}</version>
+            <version>${testNG-compile.version}</version>
             <scope>compile</scope>
         </dependency>
 
