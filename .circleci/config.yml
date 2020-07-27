@@ -1,12 +1,10 @@
 version: 2.1
 
-jobs:
+orbs:
   maven: circleci/maven@0.0.12
 
 workflows:
   maven_test:
     jobs:
       - maven/test # checkout, build, test, and upload test results
-    run:
       - mvn clean -Dtest=VerifyingEmailID test -DreTry=0
-
