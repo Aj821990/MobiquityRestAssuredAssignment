@@ -1,10 +1,31 @@
-version: 2.1
+version: 2
+jobs:
+  build:
 
-orbs:
-  maven: circleci/maven@0.0.12
+    working_directory: ~/MobiquityRestAssuredAssignment
 
-workflows:
-  maven_test:
-    jobs:
-      - maven/test # checkout, build, test, and upload test results
-      - mvn clean -Dtest=VerifyingEmailID test -DreTry=0
+    docker:
+      - image: circleci/openjdk:8-jdk-stretch
+
+    steps:
+
+      - checkout
+
+      - restore_cache:
+
+          key: MobiquityRestAssuredAssignment-{{ checksum "pom.xml" }}
+
+      - run: mvn dependency:go-offline # gets the project dependencies
+
+      - save_cache:
+          paths:
+            - ~/.m2
+          key: MobiquityRestAssuredAssignment-{{ checksum "pom.xml" }}
+
+      - run: mvn clean test -Dtest=VerifyingEmailID -DreTry=0
+
+      - store_test_results:
+          path: reports
+
+      - store_artifacts:
+          path: reports
