@@ -6,12 +6,6 @@
     <parameter name="env" value=""/>
     <parameter name="____" value="____"/>
 
-<!--
-    <listeners>
-        <listener class-name="" />
-    </listeners>
--->
-
     <test name="Tests">
         <classes>
             <class name="APITesting.testCases.VerifyingEmailID"> </class>
