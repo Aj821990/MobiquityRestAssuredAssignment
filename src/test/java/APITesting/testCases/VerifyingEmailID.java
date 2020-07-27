@@ -1,6 +1,7 @@
 package APITesting.testCases;
 
 import APITesting.apiCalls.getUserID;
+import framework.Utilities.Constants;
 import framework.base.TestBase;
 import org.testng.annotations.Test;
 
@@ -11,6 +12,6 @@ public class VerifyingEmailID extends TestBase {
     {
         getUserID getUserID = new getUserID();
 
-        getUserID.searchUserId("Delphine");
+        getUserID.searchUserId(Constants.USER);
     }
 }
