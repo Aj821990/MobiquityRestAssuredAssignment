@@ -18,6 +18,8 @@ public class BasePageMethod extends TestBase{
     public static void AssertStatusCode(int actualStatusCode, int expectedStatusCode)
     {
         if(actualStatusCode != expectedStatusCode)
-            Assert.fail("Mismatch in status code");
+        {
+            Assert.assertEquals(actualStatusCode, expectedStatusCode);
+        }
     }
 }

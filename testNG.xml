@@ -8,7 +8,10 @@
 
     <test name="Tests">
         <classes>
-            <class name="APITesting.testCases.VerifyingEmailID"> </class>
+            <class name="APITesting.testCases.verifyUserService"> </class>
+            <class name="APITesting.testCases.verifyPostService"> </class>
+            <class name="APITesting.testCases.verifyEmailService"> </class>
+            <class name="APITesting.testCases.verifyEmailID"> </class>
         </classes>
     </test>
 </suite>
