@@ -10,7 +10,7 @@ import java.util.List;
 
 import static io.restassured.RestAssured.given;
 
-public class searchPostID extends BasePageMethod {
+public class SearchPostID extends BasePageMethod {
 
     // postID is made static to make more memory efficient
     static List<Integer> postID;
@@ -35,7 +35,7 @@ public class searchPostID extends BasePageMethod {
 
     public List<Integer> getPostID(String userName, int responseStatusCode) throws CustomeException.IDNotFoundException {
         // creating instance for searchUserID class
-        searchUserID userid = new searchUserID();
+        SearchUserID userid = new SearchUserID();
         // userID received from getUserID method is stored in userID
         int userID = userid.getUserID(Constants.VALIDUSER, Constants.SUCCESSSTATUSCODE);
         // searchPostId called based on the userID

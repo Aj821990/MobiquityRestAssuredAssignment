@@ -21,10 +21,10 @@ Below dependencies needs to be installed/configured
 Click on the run button on your IDE or right click on your testNG file and click RUN
 
 Below scenarios are mentioned in TestNG file:
-<class name="APITesting.testCases.verifyUserService"> </class>
-<class name="APITesting.testCases.verifyPostService"> </class>
-<class name="APITesting.testCases.verifyEmailService"> </class>
-<class name="APITesting.testCases.verifyEmailID"> </class>
+<class name="APITesting.testCases.VerifyUserService"> </class>
+<class name="APITesting.testCases.VerifyPostService"> </class>
+<class name="APITesting.testCases.VerifyEmailService"> </class>
+<class name="APITesting.testCases.VerifyEmailID"> </class>
 ````
 2.. Run via terminal
 ```sh

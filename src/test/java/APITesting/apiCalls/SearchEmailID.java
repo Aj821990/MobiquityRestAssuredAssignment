@@ -12,7 +12,7 @@ import java.util.List;
 
 import static io.restassured.RestAssured.given;
 
-public class searchEmailID extends BasePageMethod {
+public class SearchEmailID extends BasePageMethod {
 
     public static List<String> searchEmailId(int postID, int responseStatusCode) throws CustomeException.IDNotFoundException
     {
@@ -41,7 +41,7 @@ public class searchEmailID extends BasePageMethod {
     public static void verifyEmailID (String userName, int responseStatusCode) throws CustomeException.IDNotFoundException
     {
         // creating instance for searchPostID class
-        searchPostID searchPostID = new searchPostID();
+        SearchPostID searchPostID = new SearchPostID();
         // all post ids are saved in list postID
         List<Integer> postID = searchPostID.getPostID(userName, responseStatusCode);
         List<String> emailID = null;

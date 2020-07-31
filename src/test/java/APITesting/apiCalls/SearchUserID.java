@@ -7,7 +7,7 @@ import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.given;
 
-public class searchUserID extends BasePageMethod {
+public class SearchUserID extends BasePageMethod {
 
     // userID is made static to make more memory efficient
     static int userID;

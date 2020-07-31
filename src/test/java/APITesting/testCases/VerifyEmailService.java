@@ -5,9 +5,9 @@ import framework.Utilities.CustomeException;
 import framework.base.TestBase;
 import org.testng.annotations.Test;
 
-import static APITesting.apiCalls.searchEmailID.searchEmailId;
+import static APITesting.apiCalls.SearchEmailID.searchEmailId;
 
-public class verifyEmailService extends TestBase {
+public class VerifyEmailService extends TestBase {
 
     @Test(description = "verify emailid of valid post id")
     public void verifyEmailIDForValidPostID() throws CustomeException.IDNotFoundException {

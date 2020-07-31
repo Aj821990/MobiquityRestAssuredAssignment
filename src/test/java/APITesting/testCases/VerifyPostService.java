@@ -5,9 +5,9 @@ import framework.Utilities.CustomeException;
 import framework.base.TestBase;
 import org.testng.annotations.Test;
 
-import static APITesting.apiCalls.searchPostID.searchPostId;
+import static APITesting.apiCalls.SearchPostID.searchPostId;
 
-public class verifyPostService extends TestBase {
+public class VerifyPostService extends TestBase {
 
     @Test(description = "verify postID of valid userid")
     public void verifyPostIDForValidUser() throws CustomeException.IDNotFoundException {

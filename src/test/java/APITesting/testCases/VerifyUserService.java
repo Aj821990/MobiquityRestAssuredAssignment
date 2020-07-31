@@ -6,9 +6,9 @@ import framework.base.TestBase;
 import org.testng.annotations.Test;
 
 
-import static APITesting.apiCalls.searchUserID.searchUserId;
+import static APITesting.apiCalls.SearchUserID.searchUserId;
 
-public class verifyUserService extends TestBase {
+public class VerifyUserService extends TestBase {
 
     @Test(description = "verify user service for valid user")
     public void verifyValidUser() throws CustomeException.IDNotFoundException {
