@@ -6,8 +6,10 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
 import org.apache.commons.validator.routines.EmailValidator;
+import org.json.simple.parser.ParseException;
 import org.testng.Assert;
 
+import java.io.IOException;
 import java.util.List;
 
 import static io.restassured.RestAssured.given;
@@ -38,8 +40,7 @@ public class SearchEmailID extends BasePageMethod {
         return emailID;
     }
 
-    public static void verifyEmailID (String userName, int responseStatusCode) throws CustomeException.IDNotFoundException
-    {
+    public static void verifyEmailID (String userName, int responseStatusCode) throws CustomeException.IDNotFoundException, IOException, ParseException {
         // creating instance for searchPostID class
         SearchPostID searchPostID = new SearchPostID();
         // all post ids are saved in list postID
