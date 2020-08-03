@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
 
-    working_directory: ~/MobiquityRestAssuredAssignment
+    working_directory: ~/RestAssuredWithCircleci
 
     docker:
       - image: circleci/openjdk:8-jdk-stretch
@@ -13,14 +13,14 @@ jobs:
 
       - restore_cache:
 
-          key: MobiquityRestAssuredAssignment-{{ checksum "pom.xml" }}
+          key: RestAssuredWithCircleci-{{ checksum "pom.xml" }}
 
       - run: mvn dependency:go-offline # gets the project dependencies
 
       - save_cache:
           paths:
             - ~/.m2
-          key: MobiquityRestAssuredAssignment-{{ checksum "pom.xml" }}
+          key: RestAssuredWithCircleci-{{ checksum "pom.xml" }}
 
       - run: mvn clean test -Dtest=verifyUserService,verifyPostService,verif*EmailService,verifyEmailID -DreTry=2
 

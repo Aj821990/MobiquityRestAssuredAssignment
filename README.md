@@ -1,4 +1,4 @@
-# MobiquityRestAssuredAssignment
+# RestAssuredWithCircleci
 
 API Automation with Selenium, Rest-Assured, Java8, Maven, TestNG, docker-compose, gitlab-ci and circleci
 
@@ -9,11 +9,11 @@ Below dependencies needs to be installed/configured
 - IDE (IntelliJ is preferred)
 
 ## Downloading Project:
-- Using git command: https://github.com/Aj821990/MobiquityRestAssuredAssignment.git
+- Using git command: https://github.com/Aj821990/RestAssuredWithCircleci.git
 
 *or*
 
-- Download the project from https://github.com/Aj821990/MobiquityRestAssuredAssignment
+- Download the project from https://github.com/Aj821990/RestAssuredWithCircleci
 
 ## Execution:
 1.. Run via TestNG

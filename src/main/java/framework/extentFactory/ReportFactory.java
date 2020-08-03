@@ -53,7 +53,7 @@ public class ReportFactory {
 
         path = path + "/" + dtf.format(localDate) + "-TestReport.html";
         ExtentHtmlReporter extentHtmlReporter = new ExtentHtmlReporter(path);
-        extentHtmlReporter.config().setReportName("Mobiquity rest-assured Project");
+        extentHtmlReporter.config().setReportName("RestAssured With Circleci Project");
         extentHtmlReporter.config().setChartVisibilityOnOpen(true);
         extentHtmlReporter.setAppendExisting(true);
         extentHtmlReporter.config().setEncoding("utf-8");

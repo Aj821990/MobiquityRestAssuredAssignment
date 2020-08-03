@@ -25,4 +25,4 @@ maven-build:
   artifacts:
     when: always
     paths:
-      - /builds/Aj821990/MobiquityRestAssuredAssignment/reports/
+      - /builds/Aj821990/RestAssuredWithCircleci/reports/
