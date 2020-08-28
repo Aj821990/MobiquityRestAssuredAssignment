@@ -1,6 +1,6 @@
 package APITesting.apiCalls;
 
-import framework.Utilities.CustomeException;
+import framework.utilities.CustomeException;
 import framework.base.BasePageMethod;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;

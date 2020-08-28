@@ -1,29 +1,26 @@
 package APITesting.apiCalls;
 
-import framework.Utilities.CustomeException;
+import framework.utilities.CustomeException;
 import framework.base.BasePageMethod;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import org.json.simple.JSONArray;
-import org.json.simple.parser.ParseException;
-import org.testng.Assert;
-
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class SearchUserID extends BasePageMethod {
 
     // userID is made static to make more memory efficient
     static int userID;
 
-    public static void searchUserId(String user, int responseStatusCode) throws CustomeException.IDNotFoundException, IOException, ParseException {
+    public void searchUserId(String user, int responseStatusCode) throws CustomeException.IDNotFoundException, IOException, ParseException {
 
         Response response = given()
                 .spec(SetBaseUri())
@@ -31,16 +28,10 @@ public class SearchUserID extends BasePageMethod {
                 .get("/users");
 
         AssertStatusCode(response.statusCode(), responseStatusCode);
-        JSONParser parser = new JSONParser();
-        Object obj = parser.parse(new FileReader("src/test/resources/userAPI.json"));
 
-        // A JSON object. Key value pairs are unordered. JSONObject supports java.util.Map interface.
-        JSONObject jsonObject = (JSONObject) obj;
+        String responseBody = response.getBody().asString();
 
-        log.info("userAPI saved response file  is : " + jsonObject);
-
-        Assert.assertEquals(response.getBody().asString(), jsonObject);
-        log.info("schema matched");
+        assertThat(responseBody,matchesJsonSchemaInClasspath("userAPI.json"));
 
         JsonPath extractor = response.jsonPath();
         String ID = extractor.getString("id");

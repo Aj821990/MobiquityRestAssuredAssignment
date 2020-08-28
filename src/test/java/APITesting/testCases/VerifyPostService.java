@@ -1,7 +1,7 @@
 package APITesting.testCases;
 
-import framework.Utilities.Constants;
-import framework.Utilities.CustomeException;
+import framework.utilities.Constants;
+import framework.utilities.CustomeException;
 import framework.base.TestBase;
 import org.testng.annotations.Test;
 

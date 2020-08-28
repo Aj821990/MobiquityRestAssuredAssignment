@@ -1,7 +1,7 @@
 package framework.base;
 
-import framework.Listener.Listener;
-import framework.Utilities.ReTryTestCase;
+import framework.listener.Listener;
+import framework.utilities.ReTryTestCase;
 import framework.extentFactory.ReportFactory;
 import org.apache.log4j.Logger;
 import org.testng.IRetryAnalyzer;
@@ -21,22 +21,22 @@ import static framework.extentFactory.ReportFactory.createReportFile;
 public class TestBase {
 
     public static int RETRY;
-    public String testNameFromXML = null;
-    public static Logger log = Logger.getLogger("rootLogger");
+    String testNameFromXML = null;
+    public static final Logger log = Logger.getLogger("rootLogger");
 
-    public void initializeConfig(String reTry) throws Throwable {
-        RETRY = Integer.parseInt(reTry);
+    public static void initializeConfig(int reTry) {
+        RETRY = reTry;
     }
 
     @Parameters(value = {"reTry"})
     @BeforeSuite
     public void beforeSuite(ITestContext context,
-                            @Optional String reTry) throws Throwable {
+                            @Optional int reTry) {
 
         initializeConfig(reTry);
-        System.out.println("before creating report");
+        log.info("before creating report");
         createReportFile();
-        System.out.println("after creating report");
+        log.info("after creating report");
 
         for(ITestNGMethod method : context.getSuite().getAllMethods()) {
             method.setRetryAnalyzer(new ReTryTestCase());
@@ -51,7 +51,7 @@ public class TestBase {
     }
 
     @BeforeMethod
-    public void beforeMethod(Method method) throws RuntimeException {
+    public void beforeMethod(Method method) {
         ReportFactory.createChildTest(testNameFromXML, method.getName());
     }
 

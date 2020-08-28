@@ -1,6 +1,9 @@
-package framework.Utilities;
+package framework.utilities;
 
 public class Constants {
+
+    private Constants() {
+    }
 
     public static final String BASEURL = "https://jsonplaceholder.typicode.com/";
     public static final String VALIDUSER = "Delphine";

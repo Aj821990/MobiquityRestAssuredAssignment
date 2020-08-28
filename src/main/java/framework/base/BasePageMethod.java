@@ -1,6 +1,6 @@
 package framework.base;
 
-import framework.Utilities.Constants;
+import framework.utilities.Constants;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;

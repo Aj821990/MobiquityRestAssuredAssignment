@@ -1,4 +1,4 @@
-package framework.Utilities;
+package framework.utilities;
 
 public class CustomeException extends Exception{
 

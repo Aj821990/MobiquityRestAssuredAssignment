@@ -1,7 +1,8 @@
 package APITesting.testCases;
 
-import framework.Utilities.Constants;
-import framework.Utilities.CustomeException;
+import APITesting.apiCalls.SearchUserID;
+import framework.utilities.Constants;
+import framework.utilities.CustomeException;
 import framework.base.TestBase;
 import org.json.simple.parser.ParseException;
 import org.testng.annotations.Test;
@@ -9,13 +10,14 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-import static APITesting.apiCalls.SearchUserID.searchUserId;
+//import static APITesting.apiCalls.SearchUserID.searchUserId;
 
 public class VerifyUserService extends TestBase {
 
     @Test(description = "verify user service for valid user")
     public void verifyValidUser() throws CustomeException.IDNotFoundException, IOException, ParseException {
-        searchUserId(Constants.VALIDUSER, Constants.SUCCESSSTATUSCODE);
+        SearchUserID searchUser = new SearchUserID();
+        searchUser.searchUserId(Constants.VALIDUSER, Constants.SUCCESSSTATUSCODE);
     }
 /*
 
