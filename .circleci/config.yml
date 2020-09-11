@@ -22,7 +22,7 @@ jobs:
             - ~/.m2
           key: RestAssuredWithCircleci-{{ checksum "pom.xml" }}
 
-      - run: mvn clean test -Dtest=verifyUserService,verifyPostService,verif*EmailService,verifyEmailID -DreTry=2
+      - run: mvn clean test -Dtest=VerifyUserService,VerifyPostService,Verif*EmailService,VerifyEmailID -DreTry=2
 
       - store_test_results:
           path: reports

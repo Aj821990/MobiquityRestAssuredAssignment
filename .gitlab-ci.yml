@@ -21,7 +21,7 @@ maven-build:
     #- You also need to configure the url in your script based on the branchName
     #- Also developer needs to configure a call to your project in their ci yml file
     #- echo "executing script on branch ${branchName}"
-    - "mvn clean -Dtest=VerifyingEmailID test -DreTry=0 -DgridUrl=http://selenium__standalone-chrome:4444/wd/hub"
+    - "mvn clean test -Dtest=VerifyUserService,VerifyPostService,Verif*EmailService,VerifyEmailID -DreTry=2"
   artifacts:
     when: always
     paths:
