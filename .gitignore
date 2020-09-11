@@ -2,7 +2,4 @@
 log/
 reports/
 target/
-
-
-#do not ignore these files from ignored folders
-!target/classes/userAPI.json
+*.iml
