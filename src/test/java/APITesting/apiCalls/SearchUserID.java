@@ -4,11 +4,8 @@ import framework.utilities.CustomeException;
 import framework.base.BasePageMethod;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import java.io.FileReader;
 import java.io.IOException;
 
 import static io.restassured.RestAssured.given;
@@ -31,7 +28,8 @@ public class SearchUserID extends BasePageMethod {
 
         String responseBody = response.getBody().asString();
 
-        assertThat(responseBody,matchesJsonSchemaInClasspath("userAPI.json"));
+        //response schema validation
+        assertSchema(responseBody,"schema/userAPI.json");
 
         JsonPath extractor = response.jsonPath();
         String ID = extractor.getString("id");

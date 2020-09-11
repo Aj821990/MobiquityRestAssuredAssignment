@@ -4,6 +4,7 @@ import APITesting.apiCalls.SearchUserID;
 import framework.utilities.Constants;
 import framework.utilities.CustomeException;
 import framework.base.TestBase;
+import org.apache.log4j.BasicConfigurator;
 import org.json.simple.parser.ParseException;
 import org.testng.annotations.Test;
 

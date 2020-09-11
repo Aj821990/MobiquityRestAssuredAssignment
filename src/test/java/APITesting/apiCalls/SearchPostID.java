@@ -24,6 +24,11 @@ public class SearchPostID extends BasePageMethod {
                 .param("userId", userID)
                 .get("/posts");
 
+        String responseBody = response.getBody().asString();
+
+        //response schema validation
+        assertSchema(responseBody,"schema/postsAPI.json");
+
         JsonPath extractor = response.jsonPath();
         AssertStatusCode(response.statusCode(), responseStatusCode);
         postID = extractor.getList("id");

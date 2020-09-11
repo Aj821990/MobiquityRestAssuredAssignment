@@ -3,13 +3,20 @@ package framework.base;
 import framework.listener.Listener;
 import framework.utilities.ReTryTestCase;
 import framework.extentFactory.ReportFactory;
+import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestContext;
 import org.testng.ITestNGMethod;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.lang.reflect.Method;
+import java.util.Properties;
+
 import static framework.extentFactory.ReportFactory.createReportFile;
 
 /**
@@ -44,7 +51,7 @@ public class TestBase {
     }
 
     @BeforeClass
-    public void beforeClass() {
+    public void beforeClass() throws IOException {
         org.apache.log4j.PropertyConfigurator.configure("log4j.properties");
         testNameFromXML = this.getClass().getName();
         ReportFactory.createTest(testNameFromXML);

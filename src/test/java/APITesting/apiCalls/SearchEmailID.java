@@ -23,10 +23,12 @@ public class SearchEmailID extends BasePageMethod {
                 .param("postId", postID)
                 .get("/comments");
 
-        ResponseBody body = response.getBody();
-        String bodyAsString = body.asString();
-        //validates whether the response has email field
-        Assert.assertEquals(bodyAsString.contains("email") , true , "Response body contains email");
+        String responseBody = response.getBody().asString();
+
+        //response schema validation
+        assertSchema(responseBody,"schema/commentsAPI.json");
+
+        Assert.assertEquals(responseBody.contains("email") , true , "Response body contains email");
 
         JsonPath extractor = response.jsonPath();
         // validates whether the response code is as expected
