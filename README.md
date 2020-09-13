@@ -51,3 +51,5 @@ mvn clean test -Dtest=VerifyUserService,VerifyPostService,Verif*EmailService,Ver
 - ***Test Report:*** Test Report is saved in location - reports
 - ***Logs:*** Logs are saved in location - log
 - ***.gitignore:*** reports/, .idea/, log/, target/ are covered in .gitignore file
+
+***There are still some bit & pieces to be completed to make the framework perfect***
